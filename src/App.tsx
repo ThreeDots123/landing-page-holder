@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import "./App.css";
 import logoImg from "./assets/Logo Vector.png";
+import clsx from "clsx";
 
 export default function LandingPage() {
   return (
@@ -18,7 +19,7 @@ export default function LandingPage() {
             <a
               key={idx}
               href={`/${item.toLowerCase()}`}
-              className="hover:text-[#333]"
+              className={clsx("hover:text-[#333]", idx > 1 && "max-md:hidden")}
             >
               {item}
             </a>
@@ -149,8 +150,8 @@ export default function LandingPage() {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <p className="text-gray-300">info@Chekout.com</p>
-            <p className="text-gray-300">+234 700 833 6232</p>
+            <p className="text-gray-300">chekout@chekout.xyz</p>
+            <p className="text-gray-300">+234 807 466 9881</p>
           </div>
         </div>
         <div className="mt-8 text-center text-gray-400 text-sm">
